@@ -1,0 +1,122 @@
+
+> vite-react-typescript-starter@0.0.0 typecheck
+> tsc --noEmit -p tsconfig.app.json
+
+src/components/AppShell.tsx(52,87): error TS18048: 'm' is possibly 'undefined'.
+src/components/EditPriceModal.tsx(80,37): error TS2352: Conversion of type '{ id: any; label: any; barcode: any; image_url: any; cost_price: any; price: any; stock_qty: any; }[]' to type 'VariantRow[]' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Property 'retail_price' is missing in type '{ id: any; label: any; barcode: any; image_url: any; cost_price: any; price: any; stock_qty: any; }' but required in type 'VariantRow'.
+src/components/ParentVariantImportModal.tsx(217,1697): error TS2339: Property 'price' does not exist on type 'Partial<Record<FieldKey, string>>'.
+src/components/ParentVariantImportModal.tsx(217,1764): error TS2339: Property 'stock' does not exist on type 'Partial<Record<FieldKey, string>>'.
+src/components/ProductDetailView.tsx(403,52): error TS2304: Cannot find name 'bc'.
+src/components/ProductDetailView.tsx(404,54): error TS2304: Cannot find name 'bc'.
+src/components/ProductDetailView.tsx(774,46): error TS2345: Argument of type 'string | null | undefined' is not assignable to parameter of type 'string | null'.
+  Type 'undefined' is not assignable to type 'string | null'.
+src/components/ProductDetailView.tsx(814,17): error TS2345: Argument of type '{ id: string; barcode: string; unit: string; unit_multiplier: number; label: string | null; image_url: string | null; cost_price: number | null; price: number | null; stock_qty: number | null; is_available: boolean | null; variant_lot_prices?: { ...; }[] | undefined; }[]' is not assignable to parameter of type 'SetStateAction<ProductDetailVariant[]>'.
+  Type '{ id: string; barcode: string; unit: string; unit_multiplier: number; label: string | null; image_url: string | null; cost_price: number | null; price: number | null; stock_qty: number | null; is_available: boolean | null; variant_lot_prices?: { ...; }[] | undefined; }[]' is not assignable to type 'ProductDetailVariant[]'.
+    Type '{ id: string; barcode: string; unit: string; unit_multiplier: number; label: string | null; image_url: string | null; cost_price: number | null; price: number | null; stock_qty: number | null; is_available: boolean | null; variant_lot_prices?: { ...; }[] | undefined; }' is not assignable to type 'ProductDetailVariant'.
+      Types of property 'variant_lot_prices' are incompatible.
+        Type '{ id: string; lot_label: string; cost_price: number; retail_price: number; }[] | undefined' is not assignable to type '{ id: string; lot_label: "old" | "new"; cost_price: number; retail_price: number; }[] | undefined'.
+          Type '{ id: string; lot_label: string; cost_price: number; retail_price: number; }[]' is not assignable to type '{ id: string; lot_label: "old" | "new"; cost_price: number; retail_price: number; }[]'.
+            Type '{ id: string; lot_label: string; cost_price: number; retail_price: number; }' is not assignable to type '{ id: string; lot_label: "old" | "new"; cost_price: number; retail_price: number; }'.
+              Types of property 'lot_label' are incompatible.
+                Type 'string' is not assignable to type '"old" | "new"'.
+src/pages/AttendancePage.tsx(231,109): error TS2339: Property 'first_name' does not exist on type 'EmployeeOption'.
+src/pages/AttendancePage.tsx(474,52): error TS2345: Argument of type 'string | null' is not assignable to parameter of type 'string | undefined'.
+  Type 'null' is not assignable to type 'string | undefined'.
+src/pages/AttendancePage.tsx(689,55): error TS2322: Type '{ children: string; color: string; size: string; }' is not assignable to type 'IntrinsicAttributes & { children: ReactNode; variant?: "error" | "default" | "primary" | "success" | "warning" | "info" | undefined; className?: string | undefined; }'.
+  Property 'color' does not exist on type 'IntrinsicAttributes & { children: ReactNode; variant?: "error" | "default" | "primary" | "success" | "warning" | "info" | undefined; className?: string | undefined; }'.
+src/pages/AttendancePage.tsx(690,61): error TS2322: Type '{ children: string; color: string; size: string; }' is not assignable to type 'IntrinsicAttributes & { children: ReactNode; variant?: "error" | "default" | "primary" | "success" | "warning" | "info" | undefined; className?: string | undefined; }'.
+  Property 'color' does not exist on type 'IntrinsicAttributes & { children: ReactNode; variant?: "error" | "default" | "primary" | "success" | "warning" | "info" | undefined; className?: string | undefined; }'.
+src/pages/AttendancePage.tsx(691,62): error TS2322: Type '{ children: string; color: string; size: string; }' is not assignable to type 'IntrinsicAttributes & { children: ReactNode; variant?: "error" | "default" | "primary" | "success" | "warning" | "info" | undefined; className?: string | undefined; }'.
+  Property 'color' does not exist on type 'IntrinsicAttributes & { children: ReactNode; variant?: "error" | "default" | "primary" | "success" | "warning" | "info" | undefined; className?: string | undefined; }'.
+src/pages/AttendancePage.tsx(692,62): error TS2322: Type '{ children: string; color: string; size: string; }' is not assignable to type 'IntrinsicAttributes & { children: ReactNode; variant?: "error" | "default" | "primary" | "success" | "warning" | "info" | undefined; className?: string | undefined; }'.
+  Property 'color' does not exist on type 'IntrinsicAttributes & { children: ReactNode; variant?: "error" | "default" | "primary" | "success" | "warning" | "info" | undefined; className?: string | undefined; }'.
+src/pages/AttendancePage.tsx(702,43): error TS2322: Type '"success"' is not assignable to type '"primary" | "secondary" | "ghost" | "danger" | undefined'.
+src/pages/AttendancePage.tsx(1857,42): error TS2339: Property 'name' does not exist on type '{ name: any; start_time: any; end_time: any; }[]'.
+src/pages/AttendancePage.tsx(1857,72): error TS2339: Property 'start_time' does not exist on type '{ name: any; start_time: any; end_time: any; }[]'.
+src/pages/AttendancePage.tsx(1857,106): error TS2339: Property 'end_time' does not exist on type '{ name: any; start_time: any; end_time: any; }[]'.
+src/pages/DataTablesPage.tsx(83,19): error TS2367: This comparison appears to be unintentional because the types 'boolean' and 'string' have no overlap.
+src/pages/DataTablesPage.tsx(880,73): error TS2304: Cannot find name 'i'.
+src/pages/SalaryPage.tsx(426,5): error TS2552: Cannot find name 'setCalculating'. Did you mean 'calculating'?
+src/pages/SalaryPage.tsx(434,5): error TS2552: Cannot find name 'setCalculating'. Did you mean 'calculating'?
+src/pages/SalaryPage.tsx(444,5): error TS2552: Cannot find name 'setCalculating'. Did you mean 'calculating'?
+src/pages/SalaryPage.tsx(449,5): error TS2552: Cannot find name 'setCalculating'. Did you mean 'calculating'?
+src/pages/StockPage.tsx(486,9): error TS2322: Type 'Product' is not assignable to type 'ProductDetailProduct'.
+  Types of property 'sku' are incompatible.
+    Type 'string | null' is not assignable to type 'string'.
+      Type 'null' is not assignable to type 'string'.
+src/pages/StockPage.tsx(494,9): error TS2322: Type '(product: Product, field: "quantity" | "retail" | "platform", value: number, lotLabel: "old" | "new", platform?: string | undefined) => Promise<void>' is not assignable to type 'InlineUpdate'.
+  Types of parameters 'product' and 'product' are incompatible.
+    Type 'ProductDetailProduct' is missing the following properties from type 'Product': parent_product_id, parent_ref
+src/pages/StockPage.tsx(882,40): error TS18047: 'p.sku' is possibly 'null'.
+src/pages/StockPage.tsx(937,14): error TS2345: Argument of type '(prev: LineItem[]) => (LineItem | { product_id: string; product_name: string; sku: string | null; quantity: string; unit: string; unit_multiplier: number; type_config: string; ... 4 more ...; discount_mode: "baht"; })[]' is not assignable to parameter of type 'SetStateAction<LineItem[]>'.
+  Type '(prev: LineItem[]) => (LineItem | { product_id: string; product_name: string; sku: string | null; quantity: string; unit: string; unit_multiplier: number; type_config: string; ... 4 more ...; discount_mode: "baht"; })[]' is not assignable to type '(prevState: LineItem[]) => LineItem[]'.
+    Type '(LineItem | { product_id: string; product_name: string; sku: string | null; quantity: string; unit: string; unit_multiplier: number; type_config: string; lot_id: string; lot_label: "old" | "new"; unit_price: string; discount_value: string; discount_mode: "baht"; })[]' is not assignable to type 'LineItem[]'.
+      Type 'LineItem | { product_id: string; product_name: string; sku: string | null; quantity: string; unit: string; unit_multiplier: number; type_config: string; lot_id: string; lot_label: "old" | "new"; unit_price: string; discount_value: string; discount_mode: "baht"; }' is not assignable to type 'LineItem'.
+        Type '{ product_id: string; product_name: string; sku: string | null; quantity: string; unit: string; unit_multiplier: number; type_config: string; lot_id: string; lot_label: "old" | "new"; unit_price: string; discount_value: string; discount_mode: "baht"; }' is not assignable to type 'LineItem'.
+          Types of property 'sku' are incompatible.
+            Type 'string | null' is not assignable to type 'string'.
+              Type 'null' is not assignable to type 'string'.
+src/pages/StockPage.tsx(1027,11): error TS2322: Type 'string | null' is not assignable to type 'string'.
+  Type 'null' is not assignable to type 'string'.
+src/pages/StockPage.tsx(1973,88): error TS2339: Property 'product_barcode_id' does not exist on type 'StockLot'.
+src/pages/StockPage.tsx(1973,133): error TS2339: Property 'product_barcode_id' does not exist on type 'StockLot'.
+src/pages/UsersPage.tsx(290,24): error TS2719: Type 'ProfileWithBranches | null' is not assignable to type 'ProfileWithBranches | null'. Two different types with this name exist, but they are unrelated.
+  Type 'ProfileWithBranches' is not assignable to type 'ProfileWithBranches | null'.
+    Type 'ProfileWithBranches' is not assignable to type 'ProfileWithBranches'. Two different types with this name exist, but they are unrelated.
+      Types of property 'branch_members' are incompatible.
+        Type '{ branches: { id: string; name: string; } | null; }[]' is not assignable to type '{ id: string; branch_id: string; is_primary: boolean; branches: { id: string; name: string; } | null; }[]'.
+          Type '{ branches: { id: string; name: string; } | null; }' is missing the following properties from type '{ id: string; branch_id: string; is_primary: boolean; branches: { id: string; name: string; } | null; }': id, branch_id, is_primary
+src/pages/dashboard/BillingTab.tsx(12,37): error TS2550: Property 'at' does not exist on type '{ date: string; label: string; billed: number; pending: number; }[]'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2022' or later.
+src/pages/dashboard/BillingTab.tsx(43,9): error TS2322: Type '(value: number, name: string) => string[]' is not assignable to type '(value: number, name: string) => string'.
+  Type 'string[]' is not assignable to type 'string'.
+src/pages/dashboard/BillingTab.tsx(60,9): error TS2322: Type '(value: number) => string[]' is not assignable to type '(value: number, name: string) => string'.
+  Type 'string[]' is not assignable to type 'string'.
+src/pages/dashboard/BusinessTab.tsx(76,2394): error TS2322: Type '(value: number, name: string) => [string, string]' is not assignable to type 'Formatter<ValueType, NameType> & ((value: ValueType, name: NameType, item: TooltipPayloadEntry, index: number, payload: TooltipPayload) => ReactNode | [...])'.
+  Type '(value: number, name: string) => [string, string]' is not assignable to type 'Formatter<ValueType, NameType>'.
+    Types of parameters 'value' and 'value' are incompatible.
+      Type 'ValueType | undefined' is not assignable to type 'number'.
+        Type 'undefined' is not assignable to type 'number'.
+src/pages/dashboard/ChartKit.tsx(107,46): error TS2322: Type '(value: number, name: string) => [string, string]' is not assignable to type 'Formatter<ValueType, NameType> & ((value: ValueType, name: NameType, item: TooltipPayloadEntry, index: number, payload: TooltipPayload) => ReactNode | [...])'.
+  Type '(value: number, name: string) => [string, string]' is not assignable to type 'Formatter<ValueType, NameType>'.
+    Types of parameters 'value' and 'value' are incompatible.
+      Type 'ValueType | undefined' is not assignable to type 'number'.
+        Type 'undefined' is not assignable to type 'number'.
+src/pages/dashboard/ChartKit.tsx(118,75): error TS2322: Type '(value: number, name: string) => [string, string]' is not assignable to type 'Formatter<ValueType, NameType> & ((value: ValueType, name: NameType, item: TooltipPayloadEntry, index: number, payload: TooltipPayload) => ReactNode | [...])'.
+  Type '(value: number, name: string) => [string, string]' is not assignable to type 'Formatter<ValueType, NameType>'.
+    Types of parameters 'value' and 'value' are incompatible.
+      Type 'ValueType | undefined' is not assignable to type 'number'.
+        Type 'undefined' is not assignable to type 'number'.
+src/pages/dashboard/ChartKit.tsx(138,91): error TS2322: Type '(value: number, name: string) => [string, string]' is not assignable to type 'Formatter<ValueType, NameType> & ((value: ValueType, name: NameType, item: TooltipPayloadEntry, index: number, payload: TooltipPayload) => ReactNode | [...])'.
+  Type '(value: number, name: string) => [string, string]' is not assignable to type 'Formatter<ValueType, NameType>'.
+    Types of parameters 'value' and 'value' are incompatible.
+      Type 'ValueType | undefined' is not assignable to type 'number'.
+        Type 'undefined' is not assignable to type 'number'.
+src/pages/dashboard/EvaluationTab.tsx(38,9): error TS2322: Type '(value: number) => string[]' is not assignable to type '(value: number, name: string) => string'.
+  Type 'string[]' is not assignable to type 'string'.
+src/pages/dashboard/EvaluationTab.tsx(55,9): error TS2322: Type '(value: number) => string[]' is not assignable to type '(value: number, name: string) => string'.
+  Type 'string[]' is not assignable to type 'string'.
+src/pages/dashboard/ProductsTab.tsx(70,9): error TS2322: Type '(value: number) => string[]' is not assignable to type '(value: number, name: string) => string'.
+  Type 'string[]' is not assignable to type 'string'.
+src/pages/dashboard/ProductsTab.tsx(85,11): error TS2322: Type '(value: number) => string[]' is not assignable to type '(value: number, name: string) => string'.
+  Type 'string[]' is not assignable to type 'string'.
+src/pages/dashboard/ProductsTab.tsx(99,11): error TS2322: Type '(value: number) => string[]' is not assignable to type '(value: number, name: string) => string'.
+  Type 'string[]' is not assignable to type 'string'.
+src/pages/dashboard/TrendsTab.tsx(45,9): error TS2322: Type '(value: number, name: string) => string[]' is not assignable to type '(value: number, name: string) => string'.
+  Type 'string[]' is not assignable to type 'string'.
+src/pages/dashboard/TrendsTab.tsx(63,9): error TS2322: Type '(value: number, name: string) => string[]' is not assignable to type '(value: number, name: string) => string'.
+  Type 'string[]' is not assignable to type 'string'.
+src/pages/dashboard/WorkforceTab.tsx(36,9): error TS2322: Type '(value: number, name: string) => string[]' is not assignable to type '(value: number, name: string) => string'.
+  Type 'string[]' is not assignable to type 'string'.
+src/pages/dashboard/WorkforceTab.tsx(50,9): error TS2322: Type '(value: number) => string[]' is not assignable to type '(value: number, name: string) => string'.
+  Type 'string[]' is not assignable to type 'string'.
+src/pages/dashboard/data.ts(59,22): error TS2352: Conversion of type '{ id: any; stock_qty: any; cost_price: any; price: any; is_available: any; products: { min_stock: any; }[]; variant_lot_prices: { quantity: any; cost_price: any; retail_price: any; }[]; }[]' to type 'VariantRecord[]' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Type '{ id: any; stock_qty: any; cost_price: any; price: any; is_available: any; products: { min_stock: any; }[]; variant_lot_prices: { quantity: any; cost_price: any; retail_price: any; }[]; }' is not comparable to type 'VariantRecord'.
+    Type '{ id: any; stock_qty: any; cost_price: any; price: any; is_available: any; products: { min_stock: any; }[]; variant_lot_prices: { quantity: any; cost_price: any; retail_price: any; }[]; }' is not comparable to type 'StockMetricVariant'.
+      Types of property 'products' are incompatible.
+        Property 'min_stock' is missing in type '{ min_stock: any; }[]' but required in type '{ min_stock: number | null; }'.
+src/pages/dashboard/data.ts(67,25): error TS2352: Conversion of type '{ id: any; store_id: any; platform: any; evaluation_date: any; actual_value: any; passed: any; store_eval_stores: { name: any; }[]; }[]' to type 'EvalRecord[]' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Type '{ id: any; store_id: any; platform: any; evaluation_date: any; actual_value: any; passed: any; store_eval_stores: { name: any; }[]; }' is not comparable to type 'EvalRecord'.
+    Types of property 'store_eval_stores' are incompatible.
+      Property 'name' is missing in type '{ name: any; }[]' but required in type '{ name: string; }'.
+src/pages/dashboard/data.ts(70,497): error TS2550: Property 'at' does not exist on type 'WorkforcePoint[]'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2022' or later.
